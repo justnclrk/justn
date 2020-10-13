@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'justn/css/blog_style.css' %}">
+    <link rel="icon" type="image/svg+xml" href="{% static 'justn/img/favicon.svg' %}">
+    <title>justnspace | blog</title>
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="header">
+            <nav class="navigation">
+                <h1 class="logo"><a href="{% url 'blog-home' %}" class="logo__link">justnspace blog</a></h1>
+                <ul class="user__controls">
+                    <li class="user__controls__item">
+                        <a href="{% url 'home' %}" class="user__controls__item__link">portfolio</a>
+                    </li>
+                    <li class="user__controls__item">
+                        <button id="openTopics" class="user__controls__topics__button">blog topics</button>
+                    </li>
+                    <li class="user__controls__item">
+                        <a href="mailto:justnclrk@gmail.com" class="user__controls__item__link">contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        <div id="topics" class="topics">
+            <div class="topics__content">
+                <div class="topics__header">
+                    <h2 class="topics__title"><a class="topics__title__link" href="{% url 'blog-home' %}">topics</a>
+                    </h2>
+                    <span id="closeTopics" class="topics__close__button">&times;</span>
+                </div>
+                <ul class="topics__list">
+                    {% for tag in tags %}
+                    <li class="topics__list__item">
+                        <a href="{% url 'tagged' tag.slug %}" class="topics__list__item__link">{{ tag.name }}</a>
+                    </li>
+                    {% empty %}
+                    <li class="topics__list__item">No Tags :(</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class="content">
+            {% block blog_content %}{% endblock %}
+        </div>
+
+        {% if is_paginated %}
+        <div class="pagination">
+            <div class="pagination__list">
+                {% if page_obj.has_previous %}
+                <a href="?page=1" class="pagination__list__item">First</a>
+                <a href="?page={{ page_obj.previous_page_number }}" class="pagination__list__item">Previous</a>
+                {% endif %}
+                {% for num in page_obj.paginator.page_range %}
+                {% if page_obj.number == num %}
+                <a href="?page={{ num }}" class="pagination__list__item">{{ num }}</a>
+                {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                <a href="?page={{ num }}" class="pagination__list__item">{{ num }}</a>
+                {% endif %}
+                {% endfor %}
+                {% if page_obj.has_next %}
+                <a href="?page={{ page_obj.next_page_number }}" class="pagination__list__item">Next</a>
+                <a href="?page={{ page_obj.paginator.num_pages }}" class="pagination__list__item">Last</a>
+                {% endif %}
+            </div>
+        </div>
+        {% endif %}
+
+        {% if user.is_authenticated %}
+        <div id="admin" class="admin">
+            <p class="admin__greeting">hi {{ user }}</p>
+            <ul class="admin__list">
+                <li class="admin__list__item">
+                    <a href="{% url 'post-create' %}" class="admin__list__item__link">new</a>
+                </li>
+                {% if object.author == user %}
+                <li class="admin__list__item">
+                    <a href="{% url 'post-update' object.id %}" class="admin__list__item__link">update</a>
+                </li>
+                {% endif %}
+                <li class="admin__list__item">
+                    <a href="{% url 'logout' %}" class="admin__list__item__link">logout</a>
+                </li>
+                <li class="admin__list__item">
+                    <p id="closeAdmin" class="admin__list__item__link admin__close__button">&times;</p>
+                </li>
+            </ul>
+        </div>
+        {% endif %}
+
+    </div>
+
+    <p class="photo_credit">Photo Credit &rsaquo;&rsaquo; Renè Müller &mdash; unsplash.com/@lumachrome</p>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lax.js"></script>
+    <script type="text/javascript">
+        //topics function
+        var topics = document.getElementById('topics');
+        var openTopics = document.getElementById('openTopics');
+        var closeTopics = document.getElementById('closeTopics');
+
+        openTopics.addEventListener('click', topicsWindow);
+
+        closeTopics.addEventListener('click', topicsClose);
+
+        window.addEventListener('click', clickOutside);
+
+        function topicsWindow() {
+            topics.style.display = 'block'
+        }
+
+        function topicsClose() {
+            topics.style.display = 'none'
+        }
+
+        function clickOutside(e) {
+            if (e.target == topics) {
+                topics.style.display = 'none'
+            }
+        }
+
+        //admin function
+        var admin = document.getElementById('admin');
+        var closeAdmin = document.getElementById('closeAdmin');
+
+        closeAdmin.addEventListener('click', adminClose);
+
+        function adminClose() {
+            admin.style.display = 'none'
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+// colors
+$silver-pink: #c4b1aeff;
+$silver-chalice: #b4ada3ff;
+$khaki-web: #bfb59eff;
+$khaki-web-2: #cab7a2ff;
+$battleship-grey: #858786ff;
+
+$rich-black-fogra-39: #0a0908ff;
+$gunmetal: #22333bff;
+$cultured: #f2f4f3ff;
+
+$white: #fff;
+$black: #000;
+$cultured: #f2f4f3ff;
+
+
+// mixins
+@mixin margin-bt-sm {
+    margin-bottom: 2rem;
+}
+
+@mixin section__flexbox {
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+//media queries
+$breakpoint-small: 43.75em; //650px
+$breakpoint-xs: 28em; //450px
+
+@media only screen and (max-width: $breakpoint-small) {
+    .title, .section__image-1, .section__image-2, .section__image-3 {
+        background-attachment: scroll;
+    }
+}
+
+.portfolio {
+    font-family: 'Montserrat', sans-serif;
+    height: 100%;
+    min-width: fit-content;
+    color: #666;
+}
+
+.section__image-1, .section__image-2, .section__image-3 {
+    position: relative;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.section__image-1 {
+    background-image: url('/static/justn/img/portfolio/backgrounds/1_countryclub.jpg');
+    @include section__flexbox;
+}
+
+.section__image-2 {
+    background-image: url('/static/justn/img/portfolio/backgrounds/2_hawaii.jpg');
+    @include section__flexbox;
+}
+
+.section__image-3 {
+    background-image: url('/static/justn/img/portfolio/backgrounds/3_vegas.jpg');
+    @include section__flexbox;
+}
+
+.center {
+    text-align: center;
+}
+.section {
+    background-color: #f2f4f3ff;
+    padding: 4rem 0;
+    color: #22333bff;
+    margin: 0 auto;
+    width: 75%;
+
+    &__title {
+        background: #22333bff;
+    }
+
+    &__line {
+        &:not(:last-child) {
+            margin-bottom: 4rem;
+        }
+    }
+}
+
+.title {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    &__line {
+        margin: .5rem;
+    }
+}

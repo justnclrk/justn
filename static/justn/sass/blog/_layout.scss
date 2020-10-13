@@ -1,0 +1,20 @@
+.container {
+    max-width: 120rem;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+}
+
+.header {
+    margin-bottom: 2rem;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    min-height: 60rem;
+}
+
+.pagination {
+    margin-top: 2rem;
+    width: 100%;
+}

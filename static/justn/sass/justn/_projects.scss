@@ -1,0 +1,35 @@
+.project {
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__block {
+        margin: 1rem auto;
+        border-radius: .4rem;
+        width: 100%;
+        background: white;
+        overflow: hidden;
+        box-shadow: 2px 2px 3px black;
+        transition: all .2s;
+
+        &:hover {
+            background: rgba(133, 135, 134, 0.159);
+        }
+    }
+
+    &__link {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        transition: all .2s;
+        padding: 1rem;
+
+        
+    }
+
+    &__text {
+        margin: 2rem 0;
+    }
+}

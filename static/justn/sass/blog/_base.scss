@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+    height: 100%;
+}
+
+body {
+    position: relative;
+    font-size: 1.4rem;
+    min-height: 100%;
+    font-family: 'Noto Sans JP', sans-serif;
+    background: url('/static/justn/img/blog/Renè_Müller.jpg') no-repeat center / cover fixed;
+}
+
+.photo_credit {
+    color: $whiteish;
+    font-size: 1rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}

@@ -1,0 +1,67 @@
+//media queries
+$breakpoint-small: 40em; //650px
+
+.icon {
+    display: block;
+
+    &__list {
+        list-style: none;
+        height: 8rem;
+        display: flex;
+        align-items: stretch;
+        justify-content: space-evenly;
+
+        &__item {
+            width: 15rem;
+            cursor: pointer;
+
+            @media only screen and (max-width: $breakpoint-small) {
+                width: 10rem;
+            }
+
+            &__link:visited,
+            &__link:link {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                align-self: stretch;
+                justify-content: center;
+                color: white;
+                text-decoration: none;
+                width: 100%;
+                height: 100%;
+            }
+
+            &__link:hover {
+                transition: all .2s;
+
+                .icon {
+                    @media only screen and (min-width: $breakpoint-small) {
+                        animation: SqueezeIn .2s ease-out;
+                        opacity: 0;
+                    }
+                }
+
+                .icon__text {
+                    @media only screen and (min-width: $breakpoint-small) {
+                        animation: SqueezeOut .2s ease-out;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+    &__text {
+        z-index: 20;
+        opacity: 0;
+        position: absolute;
+
+        @media only screen and (max-width: $breakpoint-small) {
+            opacity: 1;
+            z-index: 0;
+            position: relative;
+            display: block;
+        }
+    }
+
+}

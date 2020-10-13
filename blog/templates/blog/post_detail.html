@@ -1,0 +1,36 @@
+{% extends 'blog/index.html' %}
+{% block blog_content %}
+<div class="post__detail">
+
+    <div class="post__detail__header">
+        <h3 class="post__detail__title">{{ object.title }}</h3>
+        <div class="post__detail__information">
+            <figure class="post__image__author__shell">
+                <img class="post__image__author" src="{{ object.author.profile.image.url }}"
+                    alt="author profile picture">
+            </figure>
+            <div class="post__author">
+                {{ object.author }} | {{ object.date_posted|date:"M d, Y" }}
+            </div>
+        </div>
+    </div>
+
+    <div class="post__content">
+        {{ object.content | safe }}
+    </div>
+
+    {% if object.tags %}
+    <div class="post__detail__topics">
+        <ion-icon name="pricetag" class="tag__icon"></ion-icon>
+        <ul class="post__detail__topics__list">
+            {% for tag in object.tags.all %}
+            <li class="post__detail__topics__list--item">
+                <a href="{% url 'tagged' tag.slug %}">{{ tag.name }}</a>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+
+</div>
+{% endblock blog_content %}

@@ -1,0 +1,85 @@
+{% extends 'users/base.html' %}
+{% block user_content %}
+{% if request.user == justn %}
+<form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    <h1>Update</h1>
+    {{ u_form.as_p }}
+    {{ p_form.as_p }}
+    <div>
+        <button type="submit">Update</button>
+    </div>
+</form>
+{% endif %}
+<h1>{{ justn.first_name }} {{ justn.last_name }}</h1>
+
+<ul>
+    <li>Web Developer</li>
+    <li>Chicago, IL</li>
+    <li>(630) 666-2240</li>
+    <li>{{ justn.email }}</li>
+</ul>
+
+<img src="{{ justn.profile.image.url }}" alt="Justin's Avatar">
+
+<p>I hope to achieve connections with the world through my creativity and web development skills. I want to apply what I
+    am learning to solve issues that I see and will see in the future while still having a little fun!</p>
+
+<h2>TECHNICAL PROJECTS</h2>
+<h3><a href="https://github.com/jan-2018-py1/Justin-Clark_Python1-2/tree/master/assignME_flask">AssignME</a></h3>
+<p>A meeting planning platform for meeting planners and venue space coordinators</p>
+<h3><a href="http://www.mcurank.com">MCU Rank</a></h3>
+<p>A movie ranking application for Marvel Cinematic Universe films</p>
+<h3><a href="https://justnclrk.github.io/blasphemous/">A Blasphemous Soundboard</a></h3>
+<p>A soundboard with sounds from ESPN personality, Stephen A Smith</p>
+
+<h2>PROGRAMING LANGUAGES</h2>
+<ul>
+    <li><a href="https://github.com/justnclrk/FrontEnd">HTML5, CSS, JavaScript, APIs, jQuery</a></li>
+    <li><a href="https://github.com/justnclrk/Python">Python (Flask & Django), MySQL, Ajax</a></li>
+    <li><a href="https://github.com/justnclrk/MEAN">MEAN (MongoDB, Express, Angular, Node)</a></li>
+</ul>
+
+<h2>EXPERIENCE</h2>
+<div>
+    <h3>American Academy of Orthopaedic Surgeons <small>November 2014 - PRESENT</small></h3>
+    <small>Meeting Coordinator</small>
+    <ul>
+        <li>Create and manage HTML/CSS of annual meeting web pages </li>
+        <li>Coordinate logistics of 200+ meetings/events annually</li>
+        <li>Create and maintain forms for meeting requests and attendee information for the various meetings/events</li>
+        <li>Establish SOPs for new technologies and trends in meeting planning</li>
+    </ul>
+</div>
+<div>
+    <h3>Adventist Hinsdale Hospital <small>October 2012 - November 2014</small></h3>
+    <small>Behavioral Health Counselor</small>
+    <ul>
+        <li>Assisted patients with performing activities of daily living</li>
+        <li>Provided direct patient care, in the form of therapeutic interventions</li>
+        <li>Facilitated group therapies for the various age ranges in patients</li>
+    </ul>
+</div>
+<div>
+    <h3>Bloomingdale Park District <small>October 2011 - October 2012</small></h3>
+    <small>Program Supervisor</small>
+    <ul>
+        <li>Directed after a school program at Erikson Grade School and the park district</li>
+    </ul>
+</div>
+<h2>EDUCATION</h2>
+<div>
+    <h3>Coding Dojo <small>November 2017 - March 2018</small></h3>
+    <small>Certificate of Completion</small>
+    <p>Completed 20-week online full stack development program with over 1000+ hours of hands-on coding experience in
+        HTML, CSS, JavaScript, APIs, Python and MEAN</p>
+</div>
+<div>
+    <h3>University of Iowa, Iowa City, IA <small>August 2007 - May 2011</small></h3>
+    <small>Bachelor of Arts Interdepartmental Studies, Health Science</small>
+    <ul>
+        <li>Minor in Human Relations</li>
+        <li>Certificate in Entrepreneurship</li>
+    </ul>
+</div>
+{% endblock user_content %}

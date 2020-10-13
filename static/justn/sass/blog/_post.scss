@@ -1,0 +1,147 @@
+.posts {
+    // border: 1px dotted white;
+
+    .posts__list {
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &--item {
+            width: 75%;
+            overflow: hidden;
+            border-radius: .3rem;
+            background: $whiteish;
+            box-shadow: 5px 5px 3px #0A0908;
+
+            &:not(:last-child) {
+                margin-bottom: 1rem;
+            }
+        }
+    }
+}
+
+.post {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 10rem;
+    overflow: hidden;
+    margin: 0 auto;
+    align-items: center;
+    transition: all .2s;
+    backface-visibility: hidden;
+
+    &__text {
+        width: 100%;
+        align-self: stretch;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: 2rem;
+    }
+
+    &__image__container {
+        box-shadow: -2px 0 3px black;
+    }
+
+    &__information {
+        display: flex;
+        align-items: center;
+    }
+
+    &__content {
+        padding: 1rem;
+        background: $whiteish;
+        box-shadow: 5px 5px 3px #0A0908;
+        border-radius: .3rem;
+        margin-bottom: 2rem;
+    }
+
+    &__detail {
+        &__header {
+            margin-bottom: 2rem;
+        }
+
+        &__information {
+            display: flex;
+            align-items: center;
+        }
+
+        &__topics {
+            display: flex;
+            align-items: center;
+
+            &__title {
+                margin-right: .5rem;
+            }
+
+            &__list {
+                list-style: none;
+                display: flex;
+
+                &--item {
+                    &:not(:last-child) {
+                        margin-right: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.227);
+        border-radius: .4rem;
+
+        &__background {
+            padding: 1rem;
+            border-radius: .4rem;
+        }
+
+        p {
+            padding: 1rem;
+            color: white;
+
+            &:not(:last-child) {
+                margin-bottom: .5rem;
+            }
+
+            label {
+                display: block;
+            }
+
+            .helptext {
+                margin-top: .3rem;
+                display: block;
+            }
+
+            a {
+                color: white;
+            }
+        }
+
+        input {
+            background: $whiteish;
+            color: black;
+            padding: 1rem;
+            border: none;
+            outline: none;
+            transition: all .2s;
+            border-radius: .3rem;
+            width: 100%;
+            box-shadow: 2px 2px 3px black;
+
+            &[type="checkbox"] {
+                width: auto;
+            }
+
+            &:focus {
+                border-bottom: 1px solid black;
+            }
+        }
+    }
+}

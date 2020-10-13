@@ -1,0 +1,123 @@
+@mixin link_default {
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+    transition: all .2s;
+    height: 100%;
+}
+
+.admin__list__item__link:link,
+.admin__list__item__link:visited {
+    width: 100%;
+    border-radius: .3rem;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s;
+    @include link_default;
+    color: $whiteish;
+
+    &:hover {
+        color: $blackish;
+    }
+}
+
+.logo__link:link,
+.logo__link:visited {
+    border-radius: .3rem;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    @include link_default;
+}
+
+.user__controls__item__link:link,
+.user__controls__item__link:visited, 
+.user__controls__topics__button {
+    width: 100%;
+    border-radius: .3rem;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all .2s;
+    @include link_default;
+    color: $whiteish;
+
+    &:hover {
+        color: $blackish;
+    }
+}
+
+.topics__title__link:link,
+.topics__title__link:visited {
+    @include link_default;
+}
+
+.topics__list__item__link:link,
+.topics__list__item__link:visited {
+    border-radius: .3rem;
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    padding-left: 1rem;
+    @include link_default;
+
+    &:hover {
+        color: $whiteish;
+    }
+
+
+}
+
+.post:link,
+.post:visited {
+    @include link_default;
+    height: 10rem;
+
+    &:hover {
+        .post__image__shell {
+            width: 15rem;
+        }
+    }
+}
+
+.post__content {
+    a:link,
+    a:visited {
+        @include link_default;
+    }
+}
+
+.post__detail__topics__list--item {
+    a:link,
+    a:visited {
+        @include link_default;
+        color: $whiteish;
+    }
+}
+
+.btn__container{
+    a:link,
+    a:visited {
+        @include link_default;
+        padding: 1rem 2rem;
+    }
+}
+
+.pagination__list__item:link, 
+.pagination__list__item:visited {
+    align-self: stretch;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    @include link_default;
+    color: $whiteish;
+
+    &:hover {
+        color: $blackish;
+    }
+}

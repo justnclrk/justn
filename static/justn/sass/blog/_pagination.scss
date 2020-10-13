@@ -1,0 +1,33 @@
+.pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+    &__list {       
+        display: flex;
+        align-items: center;
+        height: 4rem;
+        border-radius: 4rem;
+        @include round_box_shadow;
+
+        &__item {
+            background: $blackish;
+            transition: all .2s;
+            width: 12rem;
+
+            &:first-child {
+                border-top-left-radius: 4rem;
+                border-bottom-left-radius: 4rem;
+            }
+
+            &:last-child {
+                border-top-right-radius: 4rem;
+                border-bottom-right-radius: 4rem;
+            }
+
+            &:hover {
+                background: $plain;
+            }
+        }
+    }
+}

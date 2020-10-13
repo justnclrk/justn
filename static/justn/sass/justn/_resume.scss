@@ -1,0 +1,7 @@
+.resume {
+    &__block {
+        &:not(:last-child) {
+            margin-bottom: 5rem;
+        }
+    }
+}

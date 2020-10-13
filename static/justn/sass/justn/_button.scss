@@ -1,0 +1,45 @@
+.project__button__container {
+    width: 100%;
+    margin: 0 auto;
+    background: #22333bff;
+    padding: 1rem;
+    transition: .2s all;
+    text-align: center;
+    border-radius: .4rem;
+    box-shadow: 1px 2px 3px black;
+    
+
+    &:hover {
+        background: rgb(71, 105, 121);
+    }
+}
+
+.project__button:link,
+.project__button:visited {
+    color: #f2f4f3ff;
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    
+}
+
+.resume__button:link,
+.resume__button:visited {
+    display: block;
+    width: 50%;
+    border-radius: .7rem;
+    margin: 0 auto;
+    background: #22333bff;
+    padding: 2rem;
+    color: #f2f4f3ff;
+    text-decoration: none;
+    cursor: pointer;
+    transition: .2s all;
+    text-transform: uppercase;
+    box-shadow: 1px 2px 3px black;
+
+    &:hover {
+        background: rgb(71, 105, 121);
+    }
+}

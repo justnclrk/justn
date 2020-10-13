@@ -1,0 +1,43 @@
+.navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .logo {
+        height: 100%;
+        display: flex;
+    }
+
+    .user__controls {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        height: 4rem;
+        border-radius: 4rem;
+        @include round_box_shadow;
+
+        &__item {
+            height: 100%;
+            display: flex;
+            width: 12rem;
+            background: $blackish;
+            transition: all .2s;
+
+            &:first-child {
+                border-top-left-radius: 4rem;
+                border-bottom-left-radius: 4rem;
+            }
+
+            &:last-child {
+                border-top-right-radius: 4rem;
+                border-bottom-right-radius: 4rem;
+            }
+
+            &:hover {
+                background: $plain;
+            }
+        }
+
+    }
+}

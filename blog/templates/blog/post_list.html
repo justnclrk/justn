@@ -1,0 +1,31 @@
+{% extends 'blog/index.html' %}
+{% block blog_content %}
+<div class="posts">
+    <div class="posts__list">
+        {% for post in posts %}
+        <div class="posts__list--item">
+            <a class="post" href="{% url 'post-detail' post.id %}">
+                <div class="post__text">
+                    <h3 class="post__title">{{ post.title|truncatechars:40 }}</h3>
+                    <div class="post__information">
+                        <figure class="post__image__author__shell">
+                            <img class="post__image__author" src="{{ post.author.profile.image.url }}"
+                                alt="author profile picture">
+                        </figure>
+                        <div class="post__author">
+                            {{ post.author }} | {{ post.date_posted|date:"M j, Y" }}
+                        </div>
+                    </div>
+                </div>
+                <div class="post__image__container">
+                    <figure class="post__image__shell">
+                        <img class="post__image" src="{{ post.image.url }}" alt="post image">
+                    </figure>
+                </div>
+
+            </a>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock blog_content %}

@@ -1,0 +1,57 @@
+.user {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    background: url('/static/justn/img/portfolio/author/profile_background.jpg') no-repeat center / cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .control {
+        background: $cultured;
+        border-radius: 1.5rem;
+        padding: 2rem;
+        text-align: center;
+        height: 30rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        form {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            
+
+            input[type=text], input[type=password] {
+                background-color: transparent;
+                padding: .5rem;
+                border: 1px solid rgba(128, 128, 128, 0.507);
+                outline: none;
+                border-radius: .2rem;
+            }
+
+            input[type=text]:focus, input[type=password]:focus {
+                border: 1px solid black;
+            }
+
+            .login {
+                background: linear-gradient(to bottom right, #35012C, #4F0147);
+                border: none;
+                padding: 1rem;
+                width: 50%;
+                border-radius: 4rem;
+                color: $cultured;
+
+                &:focus {
+                    outline: 0;
+                }
+            }
+        }
+
+        a:link,
+        a:visited {
+            color: $black;
+        }
+    }
+}

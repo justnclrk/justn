@@ -2,7 +2,7 @@ import os
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-SECRET_KEY = '$@ffi7mn_xxj%+%l_(r6bbh@1=5e@%1*%bz0%*=7%l+$1o3a8$'
+SECRET_KEY = os.environ.get('JUSTN_SECRET_KEY')
 
 DEBUG = True
 

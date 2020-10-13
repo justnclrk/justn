@@ -1,15 +1,14 @@
 {% extends 'blog/index.html' %}
-{% block blog_content %}
+{% block content %}
 <div class="post__form">
     <h3 class="post__detail__title">{% if object %}Update{% else %}New{% endif %} Blog</h3>
     <form method="POST">
         {% csrf_token %}
         <div class="post__form__background">
             {{ form.as_p }}
-            <p><button class="post__form__button" type="submit">{% if object %}Update{% else %}Post{% endif %}</button>
+            <p><button class="submit__button" type="submit">{% if object %}Update{% else %}Post{% endif %}</button>
             </p>
         </div>
     </form>
 </div>
-
-{% endblock blog_content %}
+{% endblock content %}

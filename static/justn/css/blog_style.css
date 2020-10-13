@@ -83,16 +83,20 @@ body {
   box-shadow: 2px 2px 3px black;
 }
 
-.post__form__button {
+.submit__button {
   outline: none;
   padding: 1rem;
   border: none;
   width: 100%;
   height: 4rem;
-  background: #5e503f;
+  background: #ff6b6b;
   color: #eee5e5;
   border-radius: 0.4rem;
   box-shadow: 2px 2px 3px black;
+  transition: all 0.2s;
+}
+.submit__button:hover {
+  background: #fc7c7c;
 }
 
 .user__controls__topics__button {
@@ -472,16 +476,15 @@ body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background: rgba(0, 0, 0, 0.227);
-  border-radius: 0.4rem;
 }
 .post__form__background {
   padding: 1rem;
   border-radius: 0.4rem;
+  background: rgba(0, 0, 0, 0.734);
+  box-shadow: 2px 2px 3px black;
 }
 .post__form p {
-  padding: 1rem;
-  color: white;
+  color: #ddcecd;
 }
 .post__form p:not(:last-child) {
   margin-bottom: 0.5rem;
@@ -494,7 +497,7 @@ body {
   display: block;
 }
 .post__form p a {
-  color: white;
+  color: #ddcecd;
 }
 .post__form input {
   background: #ddcecd;

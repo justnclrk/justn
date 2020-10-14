@@ -74,15 +74,6 @@ body {
   left: 0;
 }
 
-.btn__container {
-  background: #5e503f;
-  border-radius: 0.4rem;
-  text-align: center;
-  margin: 2rem auto;
-  width: 75%;
-  box-shadow: 2px 2px 3px black;
-}
-
 .submit__button {
   outline: none;
   padding: 1rem;
@@ -90,22 +81,21 @@ body {
   width: 100%;
   height: 4rem;
   background: #ff6b6b;
-  color: #eee5e5;
+  color: #ddcecd;
   border-radius: 0.4rem;
-  box-shadow: 2px 2px 3px black;
+  box-shadow: 2px 2px 3px #0B0014;
   transition: all 0.2s;
 }
 .submit__button:hover {
   background: #fc7c7c;
 }
 
-.user__controls__topics__button {
+.topics__button {
   outline: none;
   border: none;
   background: none;
   width: 12rem;
   height: 100%;
-  font-size: 1.4rem;
 }
 
 .topics__close__button {
@@ -162,14 +152,13 @@ body {
   width: 100%;
 }
 .post__content img {
-  border-radius: 1rem;
+  border-radius: 0.4rem;
   margin: 1rem;
 }
 
 .container {
   max-width: 120rem;
   margin: 0 auto;
-  padding: 2rem 1rem;
 }
 
 .header {
@@ -180,6 +169,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 60rem;
+  padding: 0 2rem;
 }
 
 .pagination {
@@ -198,7 +188,7 @@ body {
   transition: all 0.2s;
   cursor: pointer;
   text-decoration: none;
-  color: black;
+  color: #0B0014;
   transition: all 0.2s;
   height: 100%;
   color: #ddcecd;
@@ -210,21 +200,18 @@ body {
 
 .logo__link:link,
 .logo__link:visited {
-  border-radius: 0.3rem;
-  align-self: stretch;
-  display: flex;
-  align-items: center;
-  padding: 1rem;
+  cursor: pointer;
   cursor: pointer;
   text-decoration: none;
-  color: black;
+  color: #0B0014;
   transition: all 0.2s;
   height: 100%;
+  color: transparent;
 }
 
-.user__controls__item__link:link,
-.user__controls__item__link:visited,
-.user__controls__topics__button {
+.navigation__list__item__link:link,
+.navigation__list__item__link:visited,
+.topics__button {
   width: 100%;
   border-radius: 0.3rem;
   align-self: stretch;
@@ -234,14 +221,14 @@ body {
   transition: all 0.2s;
   cursor: pointer;
   text-decoration: none;
-  color: black;
+  color: #0B0014;
   transition: all 0.2s;
   height: 100%;
   color: #ddcecd;
 }
-.user__controls__item__link:link:hover,
-.user__controls__item__link:visited:hover,
-.user__controls__topics__button:hover {
+.navigation__list__item__link:link:hover,
+.navigation__list__item__link:visited:hover,
+.topics__button:hover {
   color: #0B0014;
 }
 
@@ -249,7 +236,7 @@ body {
 .topics__title__link:visited {
   cursor: pointer;
   text-decoration: none;
-  color: black;
+  color: #0B0014;
   transition: all 0.2s;
   height: 100%;
 }
@@ -263,7 +250,7 @@ body {
   padding-left: 1rem;
   cursor: pointer;
   text-decoration: none;
-  color: black;
+  color: #0B0014;
   transition: all 0.2s;
   height: 100%;
 }
@@ -276,21 +263,17 @@ body {
 .post:visited {
   cursor: pointer;
   text-decoration: none;
-  color: black;
+  color: #0B0014;
   transition: all 0.2s;
   height: 100%;
   height: 10rem;
-}
-.post:link:hover .post__image__shell,
-.post:visited:hover .post__image__shell {
-  width: 15rem;
 }
 
 .post__content a:link,
 .post__content a:visited {
   cursor: pointer;
   text-decoration: none;
-  color: black;
+  color: #0B0014;
   transition: all 0.2s;
   height: 100%;
 }
@@ -299,20 +282,10 @@ body {
 .post__detail__topics__list--item a:visited {
   cursor: pointer;
   text-decoration: none;
-  color: black;
+  color: #0B0014;
   transition: all 0.2s;
   height: 100%;
   color: #ddcecd;
-}
-
-.btn__container a:link,
-.btn__container a:visited {
-  cursor: pointer;
-  text-decoration: none;
-  color: black;
-  transition: all 0.2s;
-  height: 100%;
-  padding: 1rem 2rem;
 }
 
 .pagination__list__item:link,
@@ -324,7 +297,7 @@ body {
   padding: 1rem;
   cursor: pointer;
   text-decoration: none;
-  color: black;
+  color: #0B0014;
   transition: all 0.2s;
   height: 100%;
   color: #ddcecd;
@@ -334,17 +307,23 @@ body {
   color: #0B0014;
 }
 
+.logo {
+  text-align: center;
+  width: 100%;
+}
+.logo__link {
+  background: url("/static/justn/img/blog/Erica_Anderson.gif") no-repeat center/cover;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
 .navigation {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
 }
-.navigation .logo {
-  height: 100%;
-  display: flex;
-}
-.navigation .user__controls {
+.navigation__list {
   list-style: none;
   display: flex;
   align-items: center;
@@ -352,22 +331,22 @@ body {
   border-radius: 4rem;
   box-shadow: 0px 3px 3px #0B0014;
 }
-.navigation .user__controls__item {
+.navigation__list__item {
   height: 100%;
   display: flex;
   width: 12rem;
   background: #0B0014;
   transition: all 0.2s;
 }
-.navigation .user__controls__item:first-child {
+.navigation__list__item:first-child {
   border-top-left-radius: 4rem;
   border-bottom-left-radius: 4rem;
 }
-.navigation .user__controls__item:last-child {
+.navigation__list__item:last-child {
   border-top-right-radius: 4rem;
   border-bottom-right-radius: 4rem;
 }
-.navigation .user__controls__item:hover {
+.navigation__list__item:hover {
   background: #EAE0D5;
 }
 
@@ -412,9 +391,13 @@ body {
   border-radius: 0.3rem;
   background: #ddcecd;
   box-shadow: 5px 5px 3px #0A0908;
+  transition: all 0.2s;
 }
 .posts .posts__list--item:not(:last-child) {
   margin-bottom: 1rem;
+}
+.posts .posts__list--item:hover {
+  transform: translateX(2rem);
 }
 
 .post {
@@ -487,10 +470,7 @@ body {
   color: #ddcecd;
 }
 .post__form p:not(:last-child) {
-  margin-bottom: 0.5rem;
-}
-.post__form p label {
-  display: block;
+  margin-bottom: 1rem;
 }
 .post__form p .helptext {
   margin-top: 0.3rem;
@@ -507,14 +487,14 @@ body {
   outline: none;
   transition: all 0.2s;
   border-radius: 0.3rem;
-  width: 100%;
+  width: 50%;
   box-shadow: 2px 2px 3px black;
 }
 .post__form input[type=checkbox] {
   width: auto;
 }
 .post__form input:focus {
-  border-bottom: 1px solid black;
+  background: #ffe66d;
 }
 
 .topics {
@@ -530,6 +510,7 @@ body {
 }
 .topics__content {
   width: 40rem;
+  max-height: 70vh;
   margin: 14rem auto;
   background: #ddcecd;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
@@ -553,6 +534,7 @@ body {
   width: 100%;
   height: 5rem;
   border-radius: 0.4rem;
+  transition: all 0.2s;
 }
 .topics__list__item:hover {
   background: #0B0014;
@@ -565,17 +547,18 @@ body {
 }
 
 .logo__link {
-  font-size: 6rem;
-  font-weight: 300;
-  letter-spacing: 0.1rem;
+  font-size: 3.8rem;
+  font-weight: 900;
+  text-transform: uppercase;
 }
 
-.user__controls {
+.navigation__list {
   font-weight: 400;
   font-size: 1.3rem;
   text-transform: capitalize;
 }
-.user__controls__topics__button {
+
+.topics__button {
   font-size: 1.6rem;
   font-family: "Noto Sans JP", sans-serif;
   text-transform: capitalize;

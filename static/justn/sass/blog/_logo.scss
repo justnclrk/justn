@@ -1,0 +1,10 @@
+.logo {
+    text-align: center;
+    width: 100%;
+    
+    &__link {
+        background: url('/static/justn/img/blog/Erica_Anderson.gif') no-repeat center / cover;
+        -webkit-background-clip: text;
+        background-clip: text;
+    }
+}

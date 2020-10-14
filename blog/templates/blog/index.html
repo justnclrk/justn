@@ -17,17 +17,17 @@
     <div class="container">
 
         <header class="header">
+            <h1 class="logo"><a href="{% url 'blog-home' %}" class="logo__link">justnspace blog</a></h1>
             <nav class="navigation">
-                <h1 class="logo"><a href="{% url 'blog-home' %}" class="logo__link">justnspace blog</a></h1>
-                <ul class="user__controls">
-                    <li class="user__controls__item">
-                        <a href="{% url 'home' %}" class="user__controls__item__link">portfolio</a>
+                <ul class="navigation__list">
+                    <li class="navigation__list__item">
+                        <a href="{% url 'home' %}" class="navigation__list__item__link">portfolio</a>
                     </li>
-                    <li class="user__controls__item">
-                        <button id="openTopics" class="user__controls__topics__button">blog topics</button>
+                    <li class="navigation__list__item">
+                        <button id="openTopics" class="topics__button">blog topics</button>
                     </li>
-                    <li class="user__controls__item">
-                        <a href="mailto:justnclrk@gmail.com" class="user__controls__item__link">contact</a>
+                    <li class="navigation__list__item">
+                        <a href="mailto:justnclrk@gmail.com" class="navigation__list__item__link">contact</a>
                     </li>
                 </ul>
             </nav>

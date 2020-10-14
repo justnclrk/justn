@@ -1,9 +1,22 @@
+//box-shadow
 @mixin box_shadow {
     box-shadow: 2px 2px 3px $blackish;
-    
 }
 
 @mixin round_box_shadow {
     box-shadow: 0px 3px 3px $blackish;
-    
+}
+
+//border-radius
+@mixin border_radius_sm {
+    border-radius: .4rem;
+}
+
+@mixin border_radius_lrg {
+    border-radius: 4rem;
+}
+
+//transitions
+@mixin transition_short {
+    transition: all .2s;
 }

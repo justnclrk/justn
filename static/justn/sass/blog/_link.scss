@@ -1,8 +1,8 @@
 @mixin link_default {
     cursor: pointer;
     text-decoration: none;
-    color: black;
-    transition: all .2s;
+    color: $blackish;
+    @include transition_short;
     height: 100%;
 }
 
@@ -25,17 +25,14 @@
 
 .logo__link:link,
 .logo__link:visited {
-    border-radius: .3rem;
-    align-self: stretch;
-    display: flex;
-    align-items: center;
-    padding: 1rem;
+    cursor: pointer;
     @include link_default;
+    color: transparent;
 }
 
-.user__controls__item__link:link,
-.user__controls__item__link:visited, 
-.user__controls__topics__button {
+.navigation__list__item__link:link,
+.navigation__list__item__link:visited, 
+.topics__button {
     width: 100%;
     border-radius: .3rem;
     align-self: stretch;
@@ -76,12 +73,6 @@
 .post:visited {
     @include link_default;
     height: 10rem;
-
-    &:hover {
-        .post__image__shell {
-            width: 15rem;
-        }
-    }
 }
 
 .post__content {
@@ -96,14 +87,6 @@
     a:visited {
         @include link_default;
         color: $whiteish;
-    }
-}
-
-.btn__container{
-    a:link,
-    a:visited {
-        @include link_default;
-        padding: 1rem 2rem;
     }
 }
 

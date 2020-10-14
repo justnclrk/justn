@@ -3,18 +3,13 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-
-    .logo {
-        height: 100%;
-        display: flex;
-    }
-
-    .user__controls {
+    
+    &__list {
         list-style: none;
         display: flex;
         align-items: center;
         height: 4rem;
-        border-radius: 4rem;
+        @include border_radius_lrg;
         @include round_box_shadow;
 
         &__item {

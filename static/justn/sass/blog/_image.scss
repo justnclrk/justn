@@ -27,7 +27,7 @@
 
     &__content {
         img {
-            border-radius: 1rem;
+            @include border_radius_sm;
             margin: 1rem;
         }
     }

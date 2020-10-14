@@ -13,9 +13,14 @@
             border-radius: .3rem;
             background: $whiteish;
             box-shadow: 5px 5px 3px #0A0908;
+            @include transition_short;
 
             &:not(:last-child) {
                 margin-bottom: 1rem;
+            }
+
+            &:hover {
+                transform: translateX(2rem);
             }
         }
     }
@@ -107,11 +112,7 @@
             color: $whiteish;
 
             &:not(:last-child) {
-                margin-bottom: .5rem;
-            }
-
-            label {
-                display: block;
+                margin-bottom: 1rem;
             }
 
             .helptext {
@@ -132,7 +133,7 @@
             outline: none;
             transition: all .2s;
             border-radius: .3rem;
-            width: 100%;
+            width: 50%;
             box-shadow: 2px 2px 3px black;
 
             &[type="checkbox"] {
@@ -140,7 +141,7 @@
             }
 
             &:focus {
-                border-bottom: 1px solid black;
+                background: $yellow;
             }
         }
     }

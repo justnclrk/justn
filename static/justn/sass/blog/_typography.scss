@@ -1,19 +1,19 @@
 .logo__link {
-    font-size: 6rem;
-    font-weight: 300;
-    letter-spacing: .1rem;
+    font-size: 3.8rem;
+    font-weight: 900;
+    text-transform: uppercase;
 }
 
-.user__controls {
+.navigation__list {
     font-weight: 400;
     font-size: 1.3rem;
     text-transform: capitalize;
+}
 
-    &__topics__button {
-        font-size: 1.6rem;
-        font-family: 'Noto Sans JP', sans-serif;
-        text-transform: capitalize;
-    }
+.topics__button {
+    font-size: 1.6rem;
+    font-family: 'Noto Sans JP', sans-serif;
+    text-transform: capitalize;
 }
 
 .topics {

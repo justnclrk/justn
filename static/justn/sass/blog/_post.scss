@@ -1,27 +1,21 @@
 .posts {
-    // border: 1px dotted white;
+    height: 100%;
 
-    .posts__list {
-        height: 100%;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
+    &__item {
+        width: 100%;
+        height: 16.66%;
+        @include border_radius_sm;
+        background: $whiteish;
+        box-shadow: 5px 5px 3px #0A0908;
+        @include transition_short;
+        overflow: hidden;
 
-        &--item {
-            width: 75%;
-            overflow: hidden;
-            border-radius: .3rem;
-            background: $whiteish;
-            box-shadow: 5px 5px 3px #0A0908;
-            @include transition_short;
+        &:not(:last-child) {
+            margin-bottom: 1rem;
+        }
 
-            &:not(:last-child) {
-                margin-bottom: 1rem;
-            }
-
-            &:hover {
-                transform: translateX(2rem);
-            }
+        &:hover {
+            transform: translateX(2rem);
         }
     }
 }
@@ -30,15 +24,21 @@
     display: flex;
     justify-content: space-between;
     width: 100%;
-    height: 10rem;
     overflow: hidden;
     margin: 0 auto;
     align-items: center;
     transition: all .2s;
     backface-visibility: hidden;
 
+    &:link,
+    &:visited {
+        @include link;
+        color: $blackish;
+    }
+
     &__text {
         width: 100%;
+        height: 100%;
         align-self: stretch;
         display: flex;
         flex-direction: column;
@@ -47,7 +47,7 @@
     }
 
     &__image__container {
-        box-shadow: -2px 0 3px black;
+        box-shadow: -3px 0 3px $blackish;
     }
 
     &__information {
@@ -58,9 +58,18 @@
     &__content {
         padding: 1rem;
         background: $whiteish;
-        box-shadow: 5px 5px 3px #0A0908;
-        border-radius: .3rem;
+        @include box_shadow;
+        @include border_radius_sm;
         margin-bottom: 2rem;
+
+        a:link,
+        a:visited {
+            color: #1975bb;
+            font-size: 1.8rem;
+            font-weight: 500;
+            text-transform: uppercase;
+
+        }
     }
 
     &__detail {

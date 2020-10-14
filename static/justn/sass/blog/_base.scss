@@ -13,21 +13,24 @@ html {
     box-sizing: border-box;
     font-size: 62.5%;
     height: 100%;
+
+    @media only screen and (max-width: $breakpoint-md) {
+        font-size: 50%;
+    }
+
+    @media only screen and (max-width: $breakpoint-sm) {
+        font-size: 40%;
+    }
+
+    @media only screen and (max-width: $breakpoint-xs) {
+        font-size: 20%;
+    }
 }
 
 body {
-    position: relative;
     font-size: 1.4rem;
-    min-height: 100%;
     font-family: 'Noto Sans JP', sans-serif;
     background: url('/static/justn/img/blog/Renè_Müller.jpg') no-repeat center / cover fixed;
-}
-
-.photo_credit {
-    color: $whiteish;
-    font-size: 1rem;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    min-height: 100vh;
+    height: 100%;
 }

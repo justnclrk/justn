@@ -1,23 +1,14 @@
 .navigation {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
+    @include navigation;
     
     &__list {
-        list-style: none;
-        display: flex;
-        align-items: center;
-        height: 4rem;
+        @include navigation_list_settings;
         @include border_radius_lrg;
         @include round_box_shadow;
 
         &__item {
-            height: 100%;
-            display: flex;
-            width: 12rem;
-            background: $blackish;
-            transition: all .2s;
+            @include navigation_item_settings;
+            @include transition_short;
 
             &:first-child {
                 border-top-left-radius: 4rem;
@@ -32,7 +23,19 @@
             &:hover {
                 background: $plain;
             }
-        }
 
+            &__link:link,
+            &__link:visited,
+            .topics__button {
+                @include navigation_link_settings;
+                @include transition_short;
+                @include link;
+                color: $whiteish;
+
+                &:hover {
+                    color: $blackish;
+                }
+            }
+        }
     }
 }

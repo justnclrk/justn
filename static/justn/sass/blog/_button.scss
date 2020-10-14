@@ -5,7 +5,9 @@
     width: 100%;
     height: 4rem;
     background: $red;
-    color: $whiteish;
+    color: $white;
+    text-transform: uppercase;
+    font-weight: bold;
     @include border_radius_sm;
     @include box_shadow;
     @include transition_short;
@@ -27,6 +29,7 @@
     cursor: pointer;
     @include transition_short;
     height: 100%;
+    font-weight: 600;
 
     &:hover {
         color: $red;

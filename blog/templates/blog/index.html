@@ -24,11 +24,24 @@
                         <a href="{% url 'home' %}" class="navigation__list__item__link">portfolio</a>
                     </li>
                     <li class="navigation__list__item">
-                        <button id="openTopics" class="topics__button">blog topics</button>
+                        <button id="openTopics" class="topics__button">topics</button>
                     </li>
                     <li class="navigation__list__item">
                         <a href="mailto:justnclrk@gmail.com" class="navigation__list__item__link">contact</a>
                     </li>
+                    {% if user.is_authenticated %}
+                    <li class="navigation__list__item">
+                        <a href="{% url 'post-create' %}" class="navigation__list__item__link">new</a>
+                    </li>
+                    {% if object.author == user %}
+                    <li class="navigation__list__item">
+                        <a href="{% url 'post-update' object.id %}" class="navigation__list__item__link">update</a>
+                    </li>
+                    {% endif %}
+                    <li class="navigation__list__item">
+                        <a href="{% url 'logout' %}" class="navigation__list__item__link">logout</a>
+                    </li>
+                    {% endif %}
                 </ul>
             </nav>
         </header>
@@ -36,7 +49,7 @@
         <div id="topics" class="topics">
             <div class="topics__content">
                 <div class="topics__header">
-                    <h2 class="topics__title"><a class="topics__title__link" href="{% url 'blog-home' %}">topics</a>
+                    <h2 class="topics__title"><a class="topics__title__link" href="{% url 'blog-home' %}">Topics</a>
                     </h2>
                     <span id="closeTopics" class="topics__close__button">&times;</span>
                 </div>
@@ -57,52 +70,40 @@
         </div>
 
         {% if is_paginated %}
-        <div class="pagination">
-            <div class="pagination__list">
+        <div class="navigation">
+            <ul class="navigation__list">
                 {% if page_obj.has_previous %}
-                <a href="?page=1" class="pagination__list__item">First</a>
-                <a href="?page={{ page_obj.previous_page_number }}" class="pagination__list__item">Previous</a>
+                <li class="navigation__list__item">
+                    <a href="?page=1" class="navigation__list__item__link">First</a>
+                </li>
+                <li class="navigation__list__item">
+                    <a href="?page={{ page_obj.previous_page_number }}"
+                        class="navigation__list__item__link">Previous</a>
+                </li>
                 {% endif %}
                 {% for num in page_obj.paginator.page_range %}
                 {% if page_obj.number == num %}
-                <a href="?page={{ num }}" class="pagination__list__item">{{ num }}</a>
+                <li class="navigation__list__item">
+                    <a href="?page={{ num }}" class="navigation__list__item__link">{{ num }}</a>
+                </li>
                 {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
-                <a href="?page={{ num }}" class="pagination__list__item">{{ num }}</a>
+                <li class="navigation__list__item">
+                    <a href="?page={{ num }}" class="navigation__list__item__link">{{ num }}</a>
+                </li>
                 {% endif %}
                 {% endfor %}
                 {% if page_obj.has_next %}
-                <a href="?page={{ page_obj.next_page_number }}" class="pagination__list__item">Next</a>
-                <a href="?page={{ page_obj.paginator.num_pages }}" class="pagination__list__item">Last</a>
-                {% endif %}
-            </div>
-        </div>
-        {% endif %}
-
-        {% if user.is_authenticated %}
-        <div id="admin" class="admin">
-            <p class="admin__greeting">hi {{ user }}</p>
-            <ul class="admin__list">
-                <li class="admin__list__item">
-                    <a href="{% url 'post-create' %}" class="admin__list__item__link">new</a>
+                <li class="navigation__list__item">
+                    <a href="?page={{ page_obj.next_page_number }}" class="navigation__list__item__link">Next</a>
                 </li>
-                {% if object.author == user %}
-                <li class="admin__list__item">
-                    <a href="{% url 'post-update' object.id %}" class="admin__list__item__link">update</a>
+                <li class="navigation__list__item">
+                    <a href="?page={{ page_obj.paginator.num_pages }}" class="navigation__list__item__link">Last</a>
                 </li>
                 {% endif %}
-                <li class="admin__list__item">
-                    <a href="{% url 'logout' %}" class="admin__list__item__link">logout</a>
-                </li>
-                <li class="admin__list__item">
-                    <p id="closeAdmin" class="admin__list__item__link admin__close__button">&times;</p>
-                </li>
             </ul>
         </div>
         {% endif %}
-
     </div>
-
-    <p class="photo_credit">Photo Credit &rsaquo;&rsaquo; Renè Müller &mdash; unsplash.com/@lumachrome</p>
 
     <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
@@ -132,16 +133,6 @@
             if (e.target == topics) {
                 topics.style.display = 'none'
             }
-        }
-
-        //admin function
-        var admin = document.getElementById('admin');
-        var closeAdmin = document.getElementById('closeAdmin');
-
-        closeAdmin.addEventListener('click', adminClose);
-
-        function adminClose() {
-            admin.style.display = 'none'
         }
     </script>
 </body>

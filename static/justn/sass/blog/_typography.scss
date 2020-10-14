@@ -11,7 +11,7 @@
 }
 
 .topics__button {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     font-family: 'Noto Sans JP', sans-serif;
     text-transform: capitalize;
 }
@@ -36,7 +36,7 @@
 
     &__title {
         font-size: 3rem;
-        font-weight: 400;
+        font-weight: 700;
         text-transform: capitalize;
     }
 
@@ -54,8 +54,8 @@
     }
 
     &__information {
-        font-size: 1.2rem;
-        font-weight: 200;
+        font-size: 1.3rem;
+        font-weight: 300;
         text-transform: capitalize;
     }
 
@@ -63,7 +63,7 @@
 
         &__title {
             font-size: 4rem;
-            font-weight: 500;
+            font-weight: 700;
             text-transform: capitalize;
         }
 
@@ -118,8 +118,4 @@
             text-transform: uppercase;
         }
     }
-}
-
-.pagination {
-    text-transform: capitalize;
 }

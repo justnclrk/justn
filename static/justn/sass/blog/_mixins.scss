@@ -9,12 +9,55 @@
 
 //border-radius
 @mixin border_radius_sm {
-    border-radius: .4rem;
+    border-radius: .8rem;
 }
 
 @mixin border_radius_lrg {
     border-radius: 4rem;
 }
+
+//links
+@mixin link {
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@mixin link_hover {
+    background: $plain;
+}
+
+//navigation
+@mixin navigation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+@mixin navigation_item_settings {
+    display: flex;
+    height: 100%;
+    width: 8rem;
+}
+
+@mixin navigation_link_settings {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self: stretch;
+    width: 100%;
+    color: $whiteish;
+}
+
+@mixin navigation_list_settings {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 4rem;
+    background: $blackish;
+}
+
 
 //transitions
 @mixin transition_short {

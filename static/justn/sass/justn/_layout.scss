@@ -101,4 +101,11 @@ $breakpoint-xs: 28em; //450px
     &__line {
         margin: .5rem;
     }
+
+    .top-secret-login:link,
+    .top-secret-login:visited {
+        color: white;
+        text-decoration: none;
+        cursor: text;
+    }
 }

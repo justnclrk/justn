@@ -243,6 +243,12 @@ body {
 .title__line {
   margin: 0.5rem;
 }
+.title .top-secret-login:link,
+.title .top-secret-login:visited {
+  color: white;
+  text-decoration: none;
+  cursor: text;
+}
 
 .project__link:link,
 .project__link:visited {
@@ -381,7 +387,7 @@ body {
 .user {
   height: 100%;
   font-family: "Montserrat", sans-serif;
-  background: url("/static/justn/img/portfolio/author/profile_background.jpg") no-repeat center/cover;
+  background: url("/static/justn/img/portfolio/author/Ivana_Cajina.jpg") no-repeat center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -426,6 +432,23 @@ body {
 .user .control a:link,
 .user .control a:visited {
   color: #000;
+}
+
+.user h1 {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+.user h2 {
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+.user .control form p {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+.user .login {
+  text-transform: uppercase;
+  font-weight: 600;
 }
 
 /*# sourceMappingURL=portfolio_style.css.map */

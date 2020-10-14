@@ -1,9 +1,8 @@
 .post {
 
-    &__image__shell {
-        width: 10rem;
+    &__image__container {
+        width: 15rem;
         height: 10rem;
-        transition: all .2s;
     }
 
     &__image {
@@ -12,13 +11,14 @@
         object-fit: cover;
     }
 
-    &__image__author__shell {
-        width: 2rem;
-        height: 2rem;
+    &__image__author__container {
+        width: 3rem;
+        height: 3rem;
         -webkit-shape-outside: circle(50% at 50% 50%);
         shape-outside: circle(50% at 50% 50%);
         -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);        
+        clip-path: circle(50% at 50% 50%);
+        margin-right: .5rem;      
     }
 
     &__image__author {
@@ -29,6 +29,7 @@
         img {
             @include border_radius_sm;
             margin: 1rem;
+            width: 100%;
         }
     }
 }

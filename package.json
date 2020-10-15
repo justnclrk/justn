@@ -5,11 +5,14 @@
   "main": "index.js",
   "scripts": {
     "watch:portfolio-sass": "node-sass static/justn/sass/portfolio.scss static/justn/css/portfolio_style.css -w",
+    "devserver": "live-server",
+    "start:portfolio": "npm-run-all --parallel devserver watch:portfolio-sass",
     "compile:portfolio-sass": "node-sass static/justn/sass/portfolio.scss static/justn/css/portfolio_style.comp.css",
     "prefix:portfolio-css": "postcss --use autoprefixer -b \"last 10 versions\" static/justn/css/portfolio_style.comp.css -o static/justn/css/portfolio_style.prefix.css",
     "compress:portfolio-css": "node-sass static/justn/css/portfolio_style.prefix.css static/justn/css/portfolio_style.css --output-style compressed",
     "build:portfolio-css": "npm-run-all compile:portfolio-sass prefix:portfolio-css compress:portfolio-css",
     "watch:blog-sass": "node-sass static/justn/sass/blog.scss static/justn/css/blog_style.css -w",
+    "start:blog": "npm-run-all --parallel devserver watch:blog-sass",
     "compile:blog-sass": "node-sass static/justn/sass/blog.scss static/justn/css/blog_style.comp.css",
     "prefix:blog-css": "postcss --use autoprefixer -b \"last 10 versions\" static/justn/css/blog_style.comp.css -o static/justn/css/blog_style.prefix.css",
     "compress:blog-css": "node-sass static/justn/css/blog_style.prefix.css static/justn/css/blog_style.css --output-style compressed",
@@ -33,6 +36,7 @@
     "postcss-scss": "^3.0.2"
   },
   "dependencies": {
-    "jquery": "^3.5.1"
+    "jquery": "^3.5.1",
+    "live-server": "^1.2.1"
   }
 }

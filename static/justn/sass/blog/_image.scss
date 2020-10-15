@@ -2,7 +2,8 @@
 
     &__image__container {
         width: 15rem;
-        height: 10rem;
+        height: 100%;
+        position: relative;
     }
 
     &__image {
@@ -11,24 +12,47 @@
         object-fit: cover;
     }
 
-    &__image__author__container {
-        width: 3rem;
-        height: 3rem;
-        -webkit-shape-outside: circle(50% at 50% 50%);
-        shape-outside: circle(50% at 50% 50%);
-        -webkit-clip-path: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
-        margin-right: .5rem;      
-    }
+    &__author {
+        &__container {
+            width: 3rem;
+            height: 3rem;
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            margin-right: .5rem;
+            background: $whiteish;
+        }
 
-    &__image__author {
-        width: 100%;
+        &__image {
+            width: 100%;
+        }
     }
 
     &__content {
         img {
             @include border_radius_sm;
             margin: 1rem;
+            width: 100%;
+        }
+    }
+}
+
+.post__detail {
+
+    &__author {
+        &__container {
+            width: 5rem;
+            height: 5rem;
+            -webkit-shape-outside: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+            -webkit-clip-path: circle(50% at 50% 50%);
+            clip-path: circle(50% at 50% 50%);
+            margin-right: .5rem;
+            background: $whiteish;
+        }
+
+        &__image {
             width: 100%;
         }
     }

@@ -2,14 +2,14 @@
 {% block content %}
 <div class="posts">
     {% for post in posts %}
-    <div class="posts__item">
+    <div class="post__container">
         <a class="post" href="{% url 'post-detail' post.id %}">
             <div class="post__text">
                 <h3 class="post__title">{{ post.title|truncatechars:40 }}</h3>
                 <div class="post__information">
-                    <figure class="post__image__author__container">
-                        <img class="post__image__author" src="{{ post.author.profile.image.url }}"
-                            alt="author profile picture">
+                    <figure class="post__author__container">
+                        <img class="post__author__image" src="{{ post.author.profile.image.url }}"
+                            alt="{{ post.author }}'s image">
                     </figure>
                     <div class="post__author">
                         {{ post.author }} | {{ post.date_posted|date:"M j, Y" }}

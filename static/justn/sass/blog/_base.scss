@@ -14,17 +14,14 @@ html {
     font-size: 62.5%;
     height: 100%;
 
-    @media only screen and (max-width: $breakpoint-md) {
+    @media only screen and (max-width: $breakpoint-sm) {
         font-size: 50%;
     }
 
-    @media only screen and (max-width: $breakpoint-sm) {
+    @media only screen and (max-width: $breakpoint-xs) {
         font-size: 40%;
     }
 
-    @media only screen and (max-width: $breakpoint-xs) {
-        font-size: 20%;
-    }
 }
 
 body {
@@ -33,4 +30,8 @@ body {
     background: url('/static/justn/img/blog/Renè_Müller.jpg') no-repeat center / cover fixed;
     min-height: 100vh;
     height: 100%;
+}
+
+form {
+    width: 100%;
 }

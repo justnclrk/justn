@@ -54,7 +54,7 @@ class PostUpdateView(TagMixin, LoginRequiredMixin, UserPassesTestMixin, UpdateVi
 class TagIndexView(TagMixin, ListView):
     model = Post
     context_object_name = 'posts'
-    paginate_by = 5
+    paginate_by = 6
 
     def get_queryset(self):
         return Post.objects.filter(active=True).filter(tags__slug=self.kwargs.get('slug')).order_by('-date_posted')

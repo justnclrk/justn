@@ -5,9 +5,9 @@
     <div class="post__detail__header">
         <h3 class="post__detail__title">{{ object.title }}</h3>
         <div class="post__detail__information">
-            <figure class="post__image__author__container">
-                <img class="post__image__author" src="{{ object.author.profile.image.url }}"
-                    alt="author profile picture">
+            <figure class="post__detail__author__container">
+                <img class="post__detail__author__image" src="{{ object.author.profile.image.url }}"
+                    alt="{{ object.author }}'s picture">
             </figure>
             <div class="post__author">
                 {{ object.author }} | {{ object.date_posted|date:"M d, Y" }}

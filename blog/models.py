@@ -8,7 +8,7 @@ from PIL import Image
 
 
 class Post(models.Model):
-    title = models.CharField(max_length=50)
+    title = models.CharField(max_length=100)
     image = models.ImageField(default='default.jpg', upload_to='posts_images')
     content = SummernoteTextField()
     date_posted = models.DateTimeField(default=timezone.now)

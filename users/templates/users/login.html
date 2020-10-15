@@ -1,6 +1,5 @@
-{% extends 'users/base.html' %}
-{% block user_content %}
-<h2>login</h2>
+{% extends 'users/index.html' %}
+{% block content %}
 <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}
@@ -8,4 +7,4 @@
         <button class="login" type="submit">Login</button>
     </div>
 </form>
-{% endblock user_content %}
+{% endblock content %}

@@ -1,13 +1,9 @@
-//media queries
-$breakpoint-small: 40em; //650px
-$breakpoint-xs: 28em; //450px
-
 .primary {
     font-family: 'Lato', sans-serif;
     font-size: 8rem;
     font-weight: 900;
     letter-spacing: .5rem;
-    color: white;
+    color: $white;
     text-transform: uppercase;
     padding: 0 1rem;
 
@@ -24,7 +20,7 @@ $breakpoint-xs: 28em; //450px
     font-size: 5rem;
     font-weight: 300;
     letter-spacing: .2rem;
-    color: white;
+    color: $white;
     text-transform: uppercase;
     padding: 0 1rem;
 
@@ -62,7 +58,9 @@ $breakpoint-xs: 28em; //450px
 
     &__text {
         font-size: 2rem;
-        font-weight: 600;
+        font-weight: 400;
+        text-transform: capitalize;
+        letter-spacing: .1rem;
 
         @media only screen and (max-width: $breakpoint-small) {
             font-size: 1rem;

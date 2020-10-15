@@ -1,15 +1,16 @@
-@import "justn/animations";
-@import "justn/base";
-@import "justn/button";
-@import "justn/icon";
-@import "justn/image";
-@import "justn/layout";
-@import "justn/link";
-@import "justn/mixins";
-@import "justn/projects";
-@import "justn/resume";
-@import "justn/technology";
-@import "justn/typography";
+@import "portfolio/mixins";
+@import "portfolio/variables";
 
-@import "user/layout";
-@import "user/typography";
+@import "portfolio/animations";
+@import "portfolio/base";
+@import "portfolio/button";
+@import "portfolio/icon";
+@import "portfolio/image";
+@import "portfolio/layout";
+@import "portfolio/projects";
+@import "portfolio/resume";
+@import "portfolio/technology";
+@import "portfolio/typography";
+
+@import "users/layout";
+@import "users/typography";

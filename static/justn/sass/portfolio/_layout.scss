@@ -1,37 +1,3 @@
-// colors
-$silver-pink: #c4b1aeff;
-$silver-chalice: #b4ada3ff;
-$khaki-web: #bfb59eff;
-$khaki-web-2: #cab7a2ff;
-$battleship-grey: #858786ff;
-
-$rich-black-fogra-39: #0a0908ff;
-$gunmetal: #22333bff;
-$cultured: #f2f4f3ff;
-
-$white: #fff;
-$black: #000;
-$cultured: #f2f4f3ff;
-
-
-// mixins
-@mixin margin-bt-sm {
-    margin-bottom: 2rem;
-}
-
-@mixin section__flexbox {
-    min-height: 600px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-}
-
-//media queries
-$breakpoint-small: 43.75em; //650px
-$breakpoint-xs: 28em; //450px
-
 @media only screen and (max-width: $breakpoint-small) {
     .title, .section__image-1, .section__image-2, .section__image-3 {
         background-attachment: scroll;
@@ -71,15 +37,16 @@ $breakpoint-xs: 28em; //450px
 .center {
     text-align: center;
 }
+
 .section {
-    background-color: #f2f4f3ff;
+    background-color: $cultured;
     padding: 4rem 0;
-    color: #22333bff;
+    color: $gunmetal;
     margin: 0 auto;
     width: 75%;
 
     &__title {
-        background: #22333bff;
+        background: $gunmetal;
     }
 
     &__line {
@@ -104,7 +71,7 @@ $breakpoint-xs: 28em; //450px
 
     .top-secret-login:link,
     .top-secret-login:visited {
-        color: white;
+        color: $white;
         text-decoration: none;
         cursor: text;
     }

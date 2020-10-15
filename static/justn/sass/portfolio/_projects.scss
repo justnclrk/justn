@@ -9,7 +9,7 @@
         margin: 1rem auto;
         border-radius: .4rem;
         width: 100%;
-        background: white;
+        background: $white;
         overflow: hidden;
         box-shadow: 2px 2px 3px black;
         transition: all .2s;
@@ -26,7 +26,11 @@
         transition: all .2s;
         padding: 1rem;
 
-        
+        &:link,
+        &:visited {
+            color: $gunmetal;
+            text-decoration: none;
+        }
     }
 
     &__text {

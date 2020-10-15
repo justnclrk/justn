@@ -54,7 +54,7 @@ body {
 }
 
 .photo_credit {
-  color: white;
+  color: #fff;
   font-size: 1rem;
   bottom: 0;
   left: 0;
@@ -118,7 +118,7 @@ body {
   width: 15rem;
   cursor: pointer;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 43.75em) {
   .icon__list__item {
     width: 10rem;
   }
@@ -129,7 +129,7 @@ body {
   align-items: center;
   align-self: stretch;
   justify-content: center;
-  color: white;
+  color: #fff;
   text-decoration: none;
   width: 100%;
   height: 100%;
@@ -137,13 +137,13 @@ body {
 .icon__list__item__link:hover {
   transition: all 0.2s;
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 43.75em) {
   .icon__list__item__link:hover .icon {
     animation: SqueezeIn 0.2s ease-out;
     opacity: 0;
   }
 }
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 43.75em) {
   .icon__list__item__link:hover .icon__text {
     animation: SqueezeOut 0.2s ease-out;
     opacity: 1;
@@ -154,7 +154,7 @@ body {
   opacity: 0;
   position: absolute;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 43.75em) {
   .icon__text {
     opacity: 1;
     z-index: 0;
@@ -245,15 +245,9 @@ body {
 }
 .title .top-secret-login:link,
 .title .top-secret-login:visited {
-  color: white;
+  color: #fff;
   text-decoration: none;
   cursor: text;
-}
-
-.project__link:link,
-.project__link:visited {
-  color: #22333bff;
-  text-decoration: none;
 }
 
 .project__list {
@@ -264,7 +258,7 @@ body {
   margin: 1rem auto;
   border-radius: 0.4rem;
   width: 100%;
-  background: white;
+  background: #fff;
   overflow: hidden;
   box-shadow: 2px 2px 3px black;
   transition: all 0.2s;
@@ -278,6 +272,10 @@ body {
   justify-content: space-evenly;
   transition: all 0.2s;
   padding: 1rem;
+}
+.project__link:link, .project__link:visited {
+  color: #22333bff;
+  text-decoration: none;
 }
 .project__text {
   margin: 2rem 0;
@@ -300,11 +298,11 @@ body {
   font-size: 8rem;
   font-weight: 900;
   letter-spacing: 0.5rem;
-  color: white;
+  color: #fff;
   text-transform: uppercase;
   padding: 0 1rem;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 43.75em) {
   .primary {
     font-size: 6rem;
   }
@@ -319,11 +317,11 @@ body {
   font-size: 5rem;
   font-weight: 300;
   letter-spacing: 0.2rem;
-  color: white;
+  color: #fff;
   text-transform: uppercase;
   padding: 0 1rem;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 43.75em) {
   .secondary {
     font-size: 4rem;
   }
@@ -353,16 +351,18 @@ body {
   fill: currentColor;
   margin-bottom: 1rem;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 43.75em) {
   .icon {
     font-size: 3rem;
   }
 }
 .icon__text {
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 400;
+  text-transform: capitalize;
+  letter-spacing: 0.1rem;
 }
-@media only screen and (max-width: 40em) {
+@media only screen and (max-width: 43.75em) {
   .icon__text {
     font-size: 1rem;
   }
@@ -398,6 +398,7 @@ body {
   padding: 2rem;
   text-align: center;
   height: 30rem;
+  width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -414,6 +415,7 @@ body {
   border: 1px solid rgba(128, 128, 128, 0.507);
   outline: none;
   border-radius: 0.2rem;
+  width: 100%;
 }
 .user .control form input[type=text]:focus, .user .control form input[type=password]:focus {
   border: 1px solid black;

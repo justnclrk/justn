@@ -19,12 +19,12 @@ html {
 body {
     min-width: fit-content;
     font-size: 1.4rem;
-    background: #f2f4f3ff;
+    background: $cultured;
     height: 100%;
 }
 
 .photo_credit {
-    color: white;
+    color: $white;
     font-size: 1rem;
     bottom: 0;
     left: 0;

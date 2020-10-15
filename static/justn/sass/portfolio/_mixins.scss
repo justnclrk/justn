@@ -1,0 +1,12 @@
+@mixin margin-bt-sm {
+    margin-bottom: 2rem;
+}
+
+@mixin section__flexbox {
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}

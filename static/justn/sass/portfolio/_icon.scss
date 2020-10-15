@@ -1,6 +1,3 @@
-//media queries
-$breakpoint-small: 40em; //650px
-
 .icon {
     display: block;
 
@@ -26,7 +23,7 @@ $breakpoint-small: 40em; //650px
                 align-items: center;
                 align-self: stretch;
                 justify-content: center;
-                color: white;
+                color: $white;
                 text-decoration: none;
                 width: 100%;
                 height: 100%;

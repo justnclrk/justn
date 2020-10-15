@@ -4,8 +4,16 @@
   "description": "a space for things",
   "main": "index.js",
   "scripts": {
-    "compile:portfolio-sass": "node-sass static/justn/sass/portfolio.scss static/justn/css/portfolio_style.css -w",
-    "compile:blog-sass": "node-sass static/justn/sass/blog.scss static/justn/css/blog_style.css -w"
+    "watch:portfolio-sass": "node-sass static/justn/sass/portfolio.scss static/justn/css/portfolio_style.css -w",
+    "compile:portfolio-sass": "node-sass static/justn/sass/portfolio.scss static/justn/css/portfolio_style.comp.css",
+    "prefix:portfolio-css": "postcss --use autoprefixer -b \"last 10 versions\" static/justn/css/portfolio_style.comp.css -o static/justn/css/portfolio_style.prefix.css",
+    "compress:portfolio-css": "node-sass static/justn/css/portfolio_style.prefix.css static/justn/css/portfolio_style.css --output-style compressed",
+    "build:portfolio-css": "npm-run-all compile:portfolio-sass prefix:portfolio-css compress:portfolio-css",
+    "watch:blog-sass": "node-sass static/justn/sass/blog.scss static/justn/css/blog_style.css -w",
+    "compile:blog-sass": "node-sass static/justn/sass/blog.scss static/justn/css/blog_style.comp.css",
+    "prefix:blog-css": "postcss --use autoprefixer -b \"last 10 versions\" static/justn/css/blog_style.comp.css -o static/justn/css/blog_style.prefix.css",
+    "compress:blog-css": "node-sass static/justn/css/blog_style.prefix.css static/justn/css/blog_style.css --output-style compressed",
+    "build:blog-css": "npm-run-all compile:blog-sass prefix:blog-css compress:blog-css"
   },
   "repository": {
     "type": "git",
@@ -18,7 +26,11 @@
   },
   "homepage": "https://github.com/justnclrk/justn#readme",
   "devDependencies": {
-    "node-sass": "^4.14.1"
+    "autoprefixer": "^10.0.1",
+    "node-sass": "^4.14.1",
+    "npm-run-all": "^4.1.5",
+    "postcss-cli": "^8.1.0",
+    "postcss-scss": "^3.0.2"
   },
   "dependencies": {
     "jquery": "^3.5.1"

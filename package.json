@@ -1,0 +1,26 @@
+{
+  "name": "justnspace",
+  "version": "1.0.0",
+  "description": "a space for things",
+  "main": "index.js",
+  "scripts": {
+    "compile:portfolio-sass": "node-sass static/justn/sass/portfolio.scss static/justn/css/portfolio_style.css -w",
+    "compile:blog-sass": "node-sass static/justn/sass/blog.scss static/justn/css/blog_style.css -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justnclrk/justn.git"
+  },
+  "author": "justin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justnclrk/justn/issues"
+  },
+  "homepage": "https://github.com/justnclrk/justn#readme",
+  "devDependencies": {
+    "node-sass": "^4.14.1"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
+}

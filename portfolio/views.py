@@ -7,4 +7,4 @@ def home(request):
     context = {
         'user': user
     }
-    return render(request, 'justn/index.html', context)
+    return render(request, 'portfolio/index.html', context)

@@ -32,8 +32,6 @@
     &__content {
         img {
             @include border_radius_sm;
-            margin: 1rem;
-            width: 100%;
         }
     }
 }

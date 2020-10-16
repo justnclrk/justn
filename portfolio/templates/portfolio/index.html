@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&family=Montserrat:wght@100;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'justn/css/portfolio_style.css' %}">
+    <link rel="icon" type="image/svg+xml" href="{% static 'justn/img/favicon.svg' %}">
+    <title>justnspace</title>
+</head>
+
+<body>
+    <div class="title">
+        <div class="title__text">
+            <h1 class="title__line primary">
+                Justin Clark
+            </h1>
+            <h2 class="title__line secondary">
+                web deve<a href="{% url 'login' %}" class="top-secret-login">lo</a>per
+            </h2>
+            <ul class="title__line icon__list">
+                <li class="icon__list__item">
+                    <a class="icon__list__item__link" href="https://www.linkedin.com/in/justin-clark-773415154/"
+                        target="_blank">
+                        <ion-icon name="logo-linkedin" class="icon"></ion-icon>
+                        <span class="icon__text">linkedin</span>
+                    </a>
+                </li>
+                <li class="icon__list__item">
+                    <a class="icon__list__item__link" href="https://github.com/justnclrk" target="_blank">
+                        <ion-icon name="logo-github" class="icon"></ion-icon>
+                        <span class="icon__text">github</span>
+                    </a>
+                </li>
+                <li class="icon__list__item">
+                    <a class="icon__list__item__link" href="mailto:justnclrk@gmail.com">
+                        <ion-icon name="chatbubbles" class="icon"></ion-icon>
+                        <span class="icon__text">contact</span>
+                    </a>
+                </li>
+                <li class="icon__list__item">
+                    <a class="icon__list__item__link" href="{% url 'blog-home' %}">
+                        <ion-icon name="newspaper" class="icon"></ion-icon>
+                        <span class="icon__text">blog</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <section class="section center">
+        <p class="section__line">
+            My name is Justin and I'm a full stack web developer from Chicago. I love to code and
+            wanted to document my coding journey and so this is my space to do that. Thank you for taking time out
+            to
+            visit!
+        </p>
+    </section>
+
+    <div class="section__image-1">
+        <div class="title__text section__title">
+            <h2 class="title__line secondary">
+                about
+            </h2>
+        </div>
+    </div>
+
+    <section class="section center">
+        <p class="section__line">
+            The product of two very hard working parents and the youngest of five boys.
+            I was always allowed to be myself which led to me being able to develop a strong
+            imagination and the desire to connect people through new and different experiences.
+        </p>
+
+        <p class="section__line">
+            I began coding at the end of 2017 and immediately fell in love with the idea of being
+            able
+            to
+            create
+            and build whatever I could think of or solve an existing problem with a few lines of
+            code.
+        </p>
+
+        <p class="section__line">
+            I enjoy full stack development in Python for the most part but am broadening my horizons in Machine
+            Learning, ReactJS and Java. I hope to share my work on those soon!
+        </p>
+    </section>
+
+    <div class="section__image-2">
+        <div class="title__text section__title">
+            <h2 class="title__line secondary">
+                projects
+            </h2>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="project__list">
+
+            <div class="project__block">
+                <a class="project__link"
+                    href="https://www.youtube.com/watch?v=4vWofcT12L0&list=PLkTz10bfaiA_WNrWKqilT6_nMan1nxeq6&ab_channel=JustinClark"
+                    target="_blank">
+                    <h3 class="tertiary">assignme</h3>
+                    <p class="project__text">
+                        An event assignment platform created for meeting professionals, planners, and
+                        coordinators.
+                    </p>
+                    <p class="technology__header">Built with:</p>
+                    <ul class="technology__list">
+                        <li class="technology__list__item">python/django</li>
+                        <li class="technology__list__item">mysql</li>
+                        <li class="technology__list__item">bootstrap</li>
+                        <li class="technology__list__item">sass</li>
+                    </ul>
+                </a>
+            </div>
+
+            <div class="project__block">
+                <a class="project__link" href="https://www.mcurank.com" target="_blank">
+                    <h3 class="tertiary">justnspace blog</h3>
+                    <p class="project__text">
+                        A professionally personal blog.
+                    </p>
+                    <p class="technology__header">Built with:</p>
+                    <ul class="technology__list">
+                        <li class="technology__list__item">python/django</li>
+                        <li class="technology__list__item">mysql</li>
+                        <li class="technology__list__item">sass</li>
+                        <li class="technology__list__item">love</li>
+                    </ul>
+                </a>
+            </div>
+
+            <div class="project__block">
+                <a class="project__link" href="https://www.mcurank.com" target="_blank">
+                    <h3 class="tertiary">mcurank</h3>
+                    <p class="project__text">
+                        Movie rank and review application for the Marvel Cinematic Universe. Long live the Mad
+                        Titan!
+                    </p>
+                    <p class="technology__header">Built with:</p>
+                    <ul class="technology__list">
+                        <li class="technology__list__item">python/django</li>
+                        <li class="technology__list__item">mysql</li>
+                        <li class="technology__list__item">bootstrap</li>
+                        <li class="technology__list__item">sass</li>
+                    </ul>
+                </a>
+            </div>
+
+        </div>
+    </section>
+
+    <div class="section__image-3">
+        <div class="title__text section__title">
+            <h2 class="title__line secondary">
+                resumé
+            </h2>
+        </div>
+    </div>
+
+    <section class="section center">
+        <div class="resume__block">
+            <h3 class="tertiary">University of Iowa</h3>
+            <p class="section__line">August 2007 &#8212; May 2011</p>
+        </div>
+
+        <div class="resume__block">
+            <h3 class="tertiary">Coding Dojo</h3>
+            <p class="section__line">November 2017 &#8212; March 2018</p>
+        </div>
+
+        <div class="resume__block">
+            <h3 class="tertiary">Professional Experience</h3>
+            <p class="section__line">
+                Since 2014, I've worked as an meeting coordinator at an association for orthopaedic surgeons.
+            </p>
+            <a class="resume__button"
+                href="https://docs.google.com/document/d/e/2PACX-1vSzd4YTznA6GnwaSuKNQJSIQzmOfnPKyKFnet1YxevUDbDTIJMcQzb-7qZtSfV2hOChMmuLkK6cpT_I/pub"
+                target="_blank">Full Resumé</a>
+        </div>
+
+    </section>
+
+    <div class="title">
+        <div class="title__text">
+            <h1 class="title__line primary">
+                Justin Clark
+            </h1>
+            <h2 class="title__line secondary">
+                web deve<a href="{% url 'login' %}" class="top-secret-login">lo</a>per
+            </h2>
+            <ul class="title__line icon__list">
+                <li class="icon__list__item">
+                    <a class="icon__list__item__link" href="https://www.linkedin.com/in/justin-clark-773415154/"
+                        target="_blank">
+                        <ion-icon name="logo-linkedin" class="icon"></ion-icon>
+                        <span class="icon__text">linkedin</span>
+                    </a>
+                </li>
+                <li class="icon__list__item">
+                    <a class="icon__list__item__link" href="https://github.com/justnclrk" target="_blank">
+                        <ion-icon name="logo-github" class="icon"></ion-icon>
+                        <span class="icon__text">github</span>
+                    </a>
+                </li>
+                <li class="icon__list__item">
+                    <a class="icon__list__item__link" href="mailto:justnclrk@gmail.com">
+                        <ion-icon name="chatbubbles" class="icon"></ion-icon>
+                        <span class="icon__text">contact</span>
+                    </a>
+                </li>
+                <li class="icon__list__item">
+                    <a class="icon__list__item__link" href="{% url 'blog-home' %}">
+                        <ion-icon name="newspaper" class="icon"></ion-icon>
+                        <span class="icon__text">blog</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <p class="photo_credit">Background Credit &rsaquo;&rsaquo; Ivana Cajina &mdash; unsplash.com/@von_co</p>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule="" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            let images = ['profile_1.png', 'profile_2.png', 'profile_3.png', 'profile_4.png'];
+            let background = ['Ivana_Cajina.jpg']
+            $('.title').css({ 'background': 'url(/static/justn/img/portfolio/author/' + images[Math.floor(Math.random() * images.length)] + ') no-repeat center / contain scroll, url(/static/justn/img/portfolio/author/' + background + ') no-repeat center / cover fixed' });
+        });
+    </script>
+
+</body>
+
+</html>

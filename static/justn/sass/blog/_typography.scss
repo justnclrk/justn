@@ -2,6 +2,14 @@
     font-size: 3.8rem;
     font-weight: 900;
     text-transform: uppercase;
+
+    @media only screen and (max-width: $breakpoint-sm) {
+        font-size: 3rem;
+    }
+
+    @media only screen and (max-width: $breakpoint-xs) {
+        font-size: 3rem;
+    }
 }
 
 .navigation__list {
@@ -50,14 +58,23 @@
 
     &__content {
         font-family: 'Montserrat', sans-serif;
-        font-size: 2.5rem;
+        font-size: 2rem;
         font-weight: 300;
         line-height: 1.8;
         
         p {
+            width: 100%;
             &:not(:last-child) {
                 margin-bottom: 2rem;
             }
+        }
+
+        @media only screen and (max-width: $breakpoint-sm) {
+            font-size: 1.5rem;
+        }
+
+        @media only screen and (max-width: $breakpoint-xs) {
+            font-size: 1.5rem;
         }
     }
 
@@ -73,6 +90,15 @@
             font-size: 4rem;
             font-weight: 700;
             text-transform: capitalize;
+            margin-bottom: .5rem;
+
+            @media only screen and (max-width: $breakpoint-sm) {
+                font-size: 2.5rem;
+            }
+
+            @media only screen and (max-width: $breakpoint-xs) {
+                font-size: 2.5rem;
+            }
         }
 
         &__information {

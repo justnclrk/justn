@@ -38,10 +38,12 @@ html {
   height: 100%; }
 
 body {
-  min-width: fit-content;
+  font-family: 'Montserrat', sans-serif;
   font-size: 1.4rem;
   background: #f2f4f3ff;
-  height: 100%; }
+  color: #666;
+  height: 100%;
+  min-width: fit-content; }
 
 .photo_credit {
   color: #fff;
@@ -136,12 +138,6 @@ body {
 @media only screen and (max-width: 43.75em) {
   .title, .section__image-1, .section__image-2, .section__image-3 {
     background-attachment: scroll; } }
-
-.portfolio {
-  font-family: 'Montserrat', sans-serif;
-  height: 100%;
-  min-width: fit-content;
-  color: #666; }
 
 .section__image-1, .section__image-2, .section__image-3 {
   position: relative;
@@ -239,8 +235,10 @@ body {
   margin-bottom: 5rem; }
 
 .technology__list {
+  width: 100%;
   list-style: none;
-  display: flex; }
+  display: flex;
+  flex-wrap: wrap; }
   .technology__list__item:not(:last-child) {
     margin-right: 1rem; }
 
@@ -306,12 +304,13 @@ body {
   letter-spacing: .1rem;
   line-height: 2.5; }
 
-.technology__list {
-  font-size: 1.2rem; }
-  .technology__list__item:first-child {
-    font-weight: 600; }
-  .technology__list__item:not(:first-child) {
-    text-transform: uppercase; }
+.technology__header {
+  font-size: 1.2rem;
+  font-weight: 600; }
+
+.technology__list__item {
+  font-size: 1.2rem;
+  text-transform: uppercase; }
 
 .user {
   height: 100%;
@@ -326,7 +325,7 @@ body {
     padding: 2rem;
     text-align: center;
     height: 30rem;
-    width: 50%;
+    width: 25rem;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly; }

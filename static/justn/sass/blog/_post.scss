@@ -4,6 +4,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    width: 100%;
 }
 
 .post__container {
@@ -11,6 +12,7 @@
     height: 11rem;
     border: 1px solid $blackish;
     background-color: $whiteish;
+    animation: moveInBottom 1s ease-out;
     @include border_radius_sm;
     
     box-shadow: 5px 5px 3px #0A0908;
@@ -20,6 +22,7 @@
     &:not(:last-child) {
         margin-bottom: 1rem;
     }
+    
 }
 
 .post {
@@ -81,6 +84,7 @@
         border: 1px solid $blackish;
         padding: 1rem;
         background: $whiteish;
+        overflow: auto;
         @include box_shadow;
         @include border_radius_sm;
         margin-bottom: 2rem;
@@ -88,15 +92,24 @@
         a:link,
         a:visited {
             color: #1975bb;
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             font-weight: 500;
             text-transform: uppercase;
+
+            @media only screen and (max-width: $breakpoint-sm) {
+                font-size: 1.2rem;
+            }
+
+            @media only screen and (max-width: $breakpoint-xs) {
+                font-size: 1.2rem;
+            }
 
         }
     }
 
     &__detail {
         width: 100%;
+        animation: moveInBottom .5s ease-out;
 
         &__header {
             margin-bottom: 2rem;
@@ -110,6 +123,7 @@
         &__topics {
             display: flex;
             align-items: center;
+            width: 100%;
 
             &__title {
                 margin-right: .5rem;

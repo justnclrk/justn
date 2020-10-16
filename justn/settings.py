@@ -21,7 +21,6 @@ INSTALLED_APPS = [
     'blog',
     'taggit',
     'django_summernote',
-    'django_sass',
 ]
 
 MIDDLEWARE = [
@@ -122,7 +121,6 @@ SUMMERNOTE_CONFIG = {
             ['view', ['codeview']],
         ],
     },
-
     'attachment_require_authentication': True,
 
 }

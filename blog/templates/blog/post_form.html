@@ -2,7 +2,7 @@
 {% block content %}
 <div class="post__form">
     <h3 class="post__detail__title">{% if object %}Update{% else %}New{% endif %} Blog</h3>
-    <form method="POST">
+    <form method="POST" enctype="multipart/form-data">
         {% csrf_token %}
         <div class="post__form__background">
             {{ form.as_p }}
